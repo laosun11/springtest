@@ -32,7 +32,12 @@ public class ClassCycleTest {
 		 * clinit
 		 * init
 		 */
-		ClassLoader classLoader = ClassCycleTest.class.getClassLoader();
+//		ClassLoader classLoader = ClassCycleTest.class.getClassLoader();
+		
+		synchronized (ClassCycleTest.class)
+	    {
+	         
+	    }
 	}
 }
 
