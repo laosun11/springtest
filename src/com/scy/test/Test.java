@@ -9,10 +9,11 @@ package com.scy.test;
 
 import javax.security.auth.DestroyFailedException;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.scy.spring.Dog;
+import com.scy.spring.JdbcTest;
 
 /**
  * Description: TODO <br/>
@@ -20,6 +21,9 @@ import com.scy.spring.Dog;
  * @author   sunchaoyuan	 
  */
 public class Test {
+	
+	
+	
 	public static void main(String[] args) throws DestroyFailedException {
 		/**
 		 * spring生命周期
@@ -30,8 +34,9 @@ public class Test {
 		 * 5.销毁 predestroy
 		 */
 		ApplicationContext ac = new ClassPathXmlApplicationContext("/application.xml");
-		Dog  dog = (Dog) ac.getBean("dog");
-		dog.sing();
+		JdbcTest jdbcTest = ac.getBean(JdbcTest.class);
+		jdbcTest.sqlExcute();
 	}
+	
 }
 
