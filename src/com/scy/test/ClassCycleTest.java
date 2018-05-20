@@ -14,7 +14,6 @@ package com.scy.test;
 public class ClassCycleTest {
 	private String name = "zhangsan";
 	private static Integer age = 10;
-	
 	public ClassCycleTest() {
 	}
 	
