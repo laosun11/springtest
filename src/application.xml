@@ -42,4 +42,5 @@
 	<bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg name="dataSource" ref="datasourcedbcp"></constructor-arg>
 	</bean>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans>  

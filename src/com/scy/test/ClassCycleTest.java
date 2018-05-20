@@ -16,7 +16,6 @@ public class ClassCycleTest {
 	private static Integer age = 10;
 	public ClassCycleTest() {
 	}
-	
 	static{
 		String a = "haha";
 	}
